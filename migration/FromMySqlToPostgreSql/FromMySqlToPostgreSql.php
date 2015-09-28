@@ -268,6 +268,7 @@ class FromMySqlToPostgreSql
             $this->pgsql->setAttribute(\PDO::ATTR_EMULATE_PREPARES, false);
             $this->pgsql->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         }
+        $this->mysql->query("SET NAMES utf8");
     }
     
     /**
